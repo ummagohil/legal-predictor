@@ -7,6 +7,7 @@ A full-stack monorepo application for predicting European Court of Human Rights 
 ```
 ├── app/                    # Next.js frontend application
 │   ├── page.tsx           # Home/overview page
+│   ├── api/predict/       # Server-side prediction API
 │   ├── predict/           # Prediction interface
 │   ├── models/            # Model management
 │   ├── comparison/        # Model comparison dashboard
@@ -62,13 +63,13 @@ python -m ml.scripts.train --epochs 10 --push_to_hub --hub_model_id your-usernam
 
 ## Environment Variables
 
-Create a \`.env.local\` file:
+Set these in your Vercel project settings (not in client code):
 
-```env
-NEXT_PUBLIC_HF_API_TOKEN=your_huggingface_token
-NEXT_PUBLIC_HF_MODEL_ID=your-username/legal-bert-ecthr
-NEXT_PUBLIC_HF_INFERENCE_URL=https://api-inference.huggingface.co/models
-```
+| Variable | Description |
+|----------|-------------|
+| `HF_API_TOKEN` | Your Hugging Face API token (server-side only) |
+| `HF_MODEL_ID` | Your model ID, e.g. `your-username/legal-bert-ecthr` |
+| `HF_INFERENCE_URL` | (Optional) Custom inference URL |
 
 ## Model Performance
 
@@ -94,4 +95,3 @@ NEXT_PUBLIC_HF_INFERENCE_URL=https://api-inference.huggingface.co/models
 ## License
 
 MIT
-```
