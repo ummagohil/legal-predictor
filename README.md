@@ -2,28 +2,6 @@
 
 A full-stack monorepo application for predicting European Court of Human Rights (ECHR) article violations using fine-tuned LegalBERT models.
 
-## Project Structure
-
-```
-├── app/                    # Next.js frontend application
-│   ├── page.tsx           # Home/overview page
-│   ├── api/predict/       # Server-side prediction API
-│   ├── predict/           # Prediction interface
-│   ├── models/            # Model management
-│   ├── comparison/        # Model comparison dashboard
-│   ├── fairness/          # Fairness analysis views
-│   └── settings/          # Configuration
-├── components/            # Shared React components
-├── lib/                   # Utility functions and API client
-├── ml/                    # Python ML pipeline
-│   ├── config.py          # Training configuration
-│   ├── data/              # Dataset loaders
-│   ├── models/            # Model architectures
-│   ├── training/          # Training scripts
-│   ├── evaluation/        # Fairness evaluation
-│   ├── inference/         # Prediction module
-│   └── scripts/           # CLI entry points
-└── types/                 # TypeScript type definitions
 ```
 
 ## Features
