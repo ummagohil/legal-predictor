@@ -2,7 +2,6 @@
 
 A full-stack monorepo application for predicting European Court of Human Rights (ECHR) article violations using fine-tuned LegalBERT models.
 
-```
 
 ## Features
 
